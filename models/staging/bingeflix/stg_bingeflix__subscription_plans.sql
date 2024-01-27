@@ -9,7 +9,7 @@ renamed as (
     select
         subscription_plan_id,
         plan_name,
-        {{ cents_to_dollars('pricing') }} as pricing,
+        {{ cents_to_dollars('pricing') }} AS pricing,
         payment_period
 
     from source

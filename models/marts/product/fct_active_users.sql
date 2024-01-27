@@ -30,5 +30,4 @@ final AS (
         LEFT JOIN events ON date_spine.calendar_date = events.created_date
     GROUP BY ALL
 )
-
 SELECT * FROM final
