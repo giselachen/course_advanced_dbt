@@ -112,8 +112,8 @@ subscription_revenue_by_month AS (
         mrr > 0 AS is_subscribed_current_month,
 
         -- Find the subscriber's first month and last subscription month
-        MIN(CASE WHEN is_subscribed_current_month THEN date_month END) OVER (PARTITION BY user_id, subscription_id) AS first_subscription_month,
-        MAX(CASE WHEN is_subscribed_current_month THEN date_month END) OVER (PARTITION BY user_id, subscription_id) AS last_subscription_month,
+        {{ get_current_user_subscription_properties('min', 'date_month') }} AS first_subscription_month,
+        {{ get_current_user_subscription_properties('max', 'date_month') }} AS last_subscription_month,
         first_subscription_month = date_month AS is_first_subscription_month,
         last_subscription_month = date_month AS is_last_subscription_month,
         mrr
@@ -179,6 +179,7 @@ final AS (
         mrr_change,
         LEAST(mrr, previous_month_mrr_amount) AS retained_mrr_amount,
         previous_month_mrr_amount,
+        {{ rolling_aggregation_n_periods('mrr_amount', 'mrr_with_changes.user_id', 'date_month') }},
 
         CASE
             WHEN is_first_subscription_month THEN 'new'

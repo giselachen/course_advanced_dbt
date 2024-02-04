@@ -37,3 +37,11 @@ This section contains documentation from the Bingeflix Users table.
 {% docs bingeflix_column_user_id %}
 The unique identifier of the Bingeflix user. A user is created when...
 {% enddocs %}
+
+{% docs bingeflix_column_first_subscription_starts_at %}
+Start datetime of the first subscription by an user.
+{% enddocs %}
+
+{% docs bingeflix_column_count_of_subscriptions %}
+Total number of subscriptions by an user.
+{% enddocs %}

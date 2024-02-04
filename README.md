@@ -31,3 +31,17 @@
 - Updated `docs_bingeflix.md` to standardize description for event related table/fields
 - Installed `dbt_project_evaluator` package and resolve errors in the project
 - Added color-highlight to the DAG
+
+#### Week 2 - Major updates
+- Added pre-commit to pipfile package list
+- Added `.pre-commit-config.yaml` file
+- Installed and ran the following three pre-commit hooks
+  - pre-commit
+  - sqlfluff
+  - dbt-checkpoint
+- Fix pre-commit errors
+  - `check the model has all columns in properties file`
+  - `fix end of files`
+  - `trim trailing whitespace`
+  - `dbt compile`
+- Add rolling_aggregation_n_periods and get_current_user_subscription_properties macro

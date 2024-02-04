@@ -9,7 +9,7 @@ models:
           - not_null
           - unique
 
-    ## Foreign keys      
+    ## Foreign keys
       - name: session_id
         description: '{{ doc("bingeflix_column_session_id") }}'
         tests:
@@ -18,8 +18,8 @@ models:
       - name: user_id
         description: '{{ doc("bingeflix_column_user_id") }}'
         tests:
-          - not_null          
-    
+          - not_null
+
     ## Timestamps
       - name: created_at
         description: '{{ doc("bingeflix_column_created_at") }}'

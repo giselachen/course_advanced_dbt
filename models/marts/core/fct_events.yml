@@ -21,7 +21,7 @@ models:
 
       - name: user_id
         data_type: number
-        description: '{{ doc("bingeflix_column_user_id") }}'         
+        description: '{{ doc("bingeflix_column_user_id") }}'
 
     ## Timestamps
       - name: created_at
@@ -32,4 +32,3 @@ models:
       - name: event_name
         data_type: varchar
         description: '{{ doc("bingeflix_column_event_name") }}'
-

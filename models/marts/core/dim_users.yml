@@ -71,3 +71,9 @@ models:
         description: Where the user lives.
         tests:
           - not_null
+
+      - name: first_subscription_starts_at
+        description: '{{ doc("bingeflix_column_first_subscription_starts_at") }}'
+
+      - name: count_of_subscriptions
+        description: '{{ doc("bingeflix_column_count_of_subscriptions") }}'
