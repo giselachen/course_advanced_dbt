@@ -45,3 +45,8 @@
   - `trim trailing whitespace`
   - `dbt compile`
 - Add rolling_aggregation_n_periods and get_current_user_subscription_properties macro
+
+#### Week 3 - Major updates
+- Deleted redundant tests from `staging_bingeflix__subscriptions` and `dim_subscriptions`
+- Converted `assert_valid_event_name` from a custom test to a generic test
+- Added a custom unit test to `fct_mrr` model
