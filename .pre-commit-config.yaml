@@ -27,7 +27,7 @@ repos:
   - id: dbt-compile # Compiles dbt (necessary for future hooks)
   - id: dbt-docs-generate # Generates the dbt docs (necessary for some future hooks)
   - id: check-source-table-has-description # Ensures all source tables have descriptions
-  - id: check-model-has-tests # Ensures all models have at least 2 tests
+  - id: check-model-has-tests # Ensures all models have at least 2 tests except for int models
     args: ["--test-cnt", "2", "--exclude", "^(?!int).*$", "--"]
     files: ^models/
   - id: check-script-semicolon # Ensure that the model does not have a semicolon at the end of the file.
