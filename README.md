@@ -50,3 +50,8 @@
 - Deleted redundant tests from `staging_bingeflix__subscriptions` and `dim_subscriptions`
 - Converted `assert_valid_event_name` from a custom test to a generic test
 - Added a custom unit test to `fct_mrr` model
+
+#### Week 4 - Major updates
+- Added incremental logic to `stg_bingeflix__events` model
+- Added dbt-snowflake-monitoring package to the project and two queries to check for top 5 costliest dbt models and daily cost of the most expensive models in the analyses folder
+- Refactored `fct_mrr` model to push some logic into the `int_subscription_periods` model
